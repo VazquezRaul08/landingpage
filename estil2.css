@@ -1,0 +1,295 @@
+html{
+    text-align: center;
+    background-color: #ff1493;
+}
+top{
+    display: flex;
+    justify-content: space-between;
+}
+.cont-temporizador{
+    display: flex;
+    justify-content: center;   
+    margin-top: 30px; 
+}
+  
+.cont-temporizador .bloque{
+    margin: 0px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.cont-temporizador .bloque div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 255, 255);
+    box-shadow: 0px 0px 6px 2px #0011ff inset;
+    color: #000000;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+  
+.cont-temporizador .bloque p{
+    font-size: 11px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.a3{
+  transform: translate(-50%,-50%);
+  font-size: 22px;
+  background-color: #00ffff;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 18px 36px;
+  box-shadow: 0px 0px 2px 1px rgba(0, 68, 25, 0.3);
+  overflow: hidden;
+}
+
+.a2{
+  transform: translate(-50%,-50%);
+  font-size: 22px;
+  background-color: #00ffff;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 18px 36px;
+  box-shadow: 0px 0px 2px 1px rgba(0, 68, 25, 0.3);
+  overflow: hidden;
+}
+
+.a1{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+    background-color: #00ffff;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 68, 253, 0.3);
+    overflow: hidden;
+  }
+  
+  .a1:before{
+    content: '';	
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(0, 17, 255, 0.06);	
+  }
+  
+  /*---------- Borde 1(arriba) ------------*/
+  .a1 span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #0066ff, #0400ff);	
+    animation: borderTop 2s linear infinite;
+  }
+  
+  @keyframes borderTop{
+    0%{
+        transform: translateX(-100%);  
+    }
+    100%{
+        transform: translateX(100%);  
+    }
+  }
+  
+  /*---------- Borde 2(derecho) ------------*/
+  .a1 span:nth-child(2){
+    position: absolute;
+    top: 0;	
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0066ff, #0400ff);	
+    animation: borderLeft 2s linear infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes borderLeft{
+    0%{
+        transform: translateY(-100%);  
+    }
+    100%{
+        transform: translateY(100%);  
+    }
+  }
+  
+  /*---------- Borde 3(abajo) ------------*/
+  .a1 span:nth-child(3){
+    position: absolute;
+    bottom: 0;	
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, #0066ff, #0400ff);	
+    animation: borderBottom 2s linear infinite;
+  }
+  
+  @keyframes borderBottom{
+    0%{
+        transform: translateX(100%);  
+    }
+    100%{
+        transform: translateX(-100%);  
+    }
+  }
+  
+  /*---------- Borde 4(izquierdo) ------------*/
+  .a1 span:nth-child(4){
+    position: absolute;
+    top: 0;	
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, #0066ff, #0400ff);	
+    animation: borderRight 2s linear infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes borderRight{
+    0%{
+        transform: translateY(100%);  
+    }
+    100%{
+        transform: translateY(-100%);  
+    }
+  }
+
+  /* Aplicando estilos para el contenedor del texto */
+  .contenedor .cont-texto {
+      display: inline-block;
+  }
+  
+  /* Aplicando estilos 3D para el texto */
+  .contenedor .cont-texto .texto { 
+    color: rgb(0, 225, 255);
+    font-size: 30px;
+    transform: perspective(200px) rotateX(10deg);
+    letter-spacing: .1em;
+    user-select: none;
+    transition: all .4s ease;
+    text-shadow: 0 -1px 0 #fff,
+                0 1px 0 #0044fd, 
+                0 2px 0 #0044fd, 
+                0 3px 0 #0044fd, 
+                0 4px 0 #004336, 
+                0 5px 0 #004134, 
+                0 6px 0 #003F32, 
+                0 7px 0 #003D30, 
+                0 8px 0 #003A2D, 
+                0 9px 0 #00382B, 
+                0 10px 0 #003528, 
+                0 11px 0 #003225, 
+                0 12px 0 #002F22, 
+                0 13px 0 #002B1E, 
+                0 14px 0 #0044fd, 
+                0 15px 0 #0044fd;
+  }
+  
+  /* Aplicando efecto hover al texto 3D*/
+  .contenedor .cont-texto .texto:hover {
+    transition: all .4s ease;
+    text-shadow: 0 0px 0 #000;
+    transform: translate(0px, 15px) perspective(200px) rotateX(10deg);
+    letter-spacing: .12em;
+  }
+
+
+  fotomovil{
+    display: flex;
+    justify-content: left;
+    font-size: 30px;
+  }
+
+  .movil{
+    font-size: 28px;
+  }
+
+  .desde{
+    text-align: left;
+    font-size: small;
+  }
+
+  .iphone{
+    text-align: left;
+    font:bold
+  }
+
+  .iphone1{
+    text-align: left;
+    font-size: 20px;
+  }
+
+  fotomovil1{
+    display: flex;
+
+    justify-content: left;
+    font-size: 30px;
+  }
+
+  .movil1{
+    font-size: 28px;
+  }
+
+  .desde1{
+    text-align: left;
+    font-size: small;
+  }
+
+  .samsung{
+    text-align: left;
+    font:bold
+  }
+
+  .samsung1{
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .cajaimg{
+    position: absolute;
+    left: -4px;
+  }
+
+  #promocion{
+    display: flex;
+    height: 300px;
+    margin-left: -350px
+  }
+
+  #promo{
+    align-items: center;
+    width: 1800px;
+    height: 250px;
+    background-image: linear-gradient(to bottom, #00439b 0%, #00ffff 100%);
+  }
+
+  .promo2{
+    position: absolute;
+    margin-left: 45%;
+    font-size: 50px;
+  }
+
+  .promo3{
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 110px;
+    font-size: 25px;
+  }
+  
+
+  
